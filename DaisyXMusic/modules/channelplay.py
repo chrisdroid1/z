@@ -380,7 +380,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "helper"
+        user.first_name = "KaelaVC"
     usar = user
     wew = usar.id
     try:
@@ -391,7 +391,7 @@ async def play(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Remember to add KaelaVC to your channel</b>",
                     )
                     pass
 
@@ -625,7 +625,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "KaelaVC"
     usar = user
     wew = usar.id
     try:
@@ -636,7 +636,7 @@ async def deezer(client: Client, message_: Message):
             if administrator == message_.from_user.id:
                 if message_.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Remember to add KaelaVC to your channel</b>",
                     )
                     pass
                 try:
@@ -756,7 +756,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "KaelaVC"
     usar = user
     wew = usar.id
     try:
@@ -767,7 +767,7 @@ async def jiosaavn(client: Client, message_: Message):
             if administrator == message_.from_user.id:
                 if message_.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Remember to add KaelaVC to your channel</b>",
                     )
                     pass
                 try:
