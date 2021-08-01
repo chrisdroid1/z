@@ -1214,6 +1214,9 @@ async def lol_cb(b, cb):
                 InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
                 InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
             ],
+            ]
+                InlineKeyboardButton(text="USERBOT GROUP", url="t.me/firexuserbot"),
+            ],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
         ]
     )
