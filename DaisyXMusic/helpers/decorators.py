@@ -21,7 +21,7 @@ from pyrogram import Client
 from pyrogram.types import Message
 
 from DaisyXMusic.config import SUDO_USERS
-from DaisyXMusic.helpers.admins import get_administrators
+from DaisyXMusic.kaelaVCs.admins import get_administrators
 
 
 def errors(func: Callable) -> Callable:

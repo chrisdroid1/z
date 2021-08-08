@@ -39,13 +39,13 @@ from DaisyXMusic.config import DURATION_LIMIT
 from DaisyXMusic.config import UPDATES_CHANNEL as updateschannel
 from DaisyXMusic.config import que
 from DaisyXMusic.function.admins import admins as a
-from DaisyXMusic.helpers.admins import get_administrators
-from DaisyXMusic.helpers.channelmusic import get_chat_id
-from DaisyXMusic.helpers.errors import DurationLimitError
-from DaisyXMusic.helpers.decorators import errors
-from DaisyXMusic.helpers.decorators import authorized_users_only
-from DaisyXMusic.helpers.filters import command, other_filters
-from DaisyXMusic.helpers.gets import get_file_name
+from DaisyXMusic.kaelaVCs.admins import get_administrators
+from DaisyXMusic.kaelaVCs.channelmusic import get_chat_id
+from DaisyXMusic.kaelaVCs.errors import DurationLimitError
+from DaisyXMusic.kaelaVCs.decorators import errors
+from DaisyXMusic.kaelaVCs.decorators import authorized_users_only
+from DaisyXMusic.kaelaVCs.filters import command, other_filters
+from DaisyXMusic.kaelaVCs.gets import get_file_name
 from DaisyXMusic.services.callsmusic import callsmusic
 from DaisyXMusic.services.callsmusic.callsmusic import client as USER
 from DaisyXMusic.services.converter.converter import convert
@@ -479,7 +479,7 @@ async def play(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Remember to add kaelaVC to your channel</b>",
                     )
                     pass
                 try:
@@ -496,7 +496,7 @@ async def play(_, message: Message):
                         message.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "<b>kaelaVC userbot joined your chat</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -744,7 +744,7 @@ async def ytplay(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "helper"
+        user.first_name = "kaelaVC"
     usar = user
     wew = usar.id
     try:
@@ -755,7 +755,7 @@ async def ytplay(_, message: Message):
             if administrator == message.from_user.id:
                 if message.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Remember to add kaelaVC to your channel</b>",
                     )
                     pass
                 try:
@@ -772,7 +772,7 @@ async def ytplay(_, message: Message):
                         message.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "<b>kaelaVC userbot joined your chat</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -902,7 +902,7 @@ async def jiosaavn(client: Client, message_: Message):
             if administrator == message_.from_user.id:
                 if message_.chat.title.startswith("Channel Music: "):
                     await lel.edit(
-                        "<b>Remember to add helper to your channel</b>",
+                        "<b>Remember to add kaelaVC to your channel</b>",
                     )
                     pass
                 try:
@@ -919,7 +919,7 @@ async def jiosaavn(client: Client, message_: Message):
                         message_.chat.id, "I joined this group for playing music in VC"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "<b>kaelaVC userbot joined your chat</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -935,7 +935,7 @@ async def jiosaavn(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            "<i> kaelaVC Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return
     requested_by = message_.from_user.first_name

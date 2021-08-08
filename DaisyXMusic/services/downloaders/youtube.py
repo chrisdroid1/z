@@ -22,7 +22,7 @@ from os import path
 from youtube_dl import YoutubeDL
 
 from DaisyXMusic.config import DURATION_LIMIT
-from DaisyXMusic.helpers.errors import DurationLimitError
+from DaisyXMusic.kaelaVCs.errors import DurationLimitError
 
 ydl_opts = {
     "format": "bestaudio/best",
