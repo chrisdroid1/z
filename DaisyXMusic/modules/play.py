@@ -891,7 +891,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "kaelaVC"
+        user.first_name = "helper"
     usar = user
     wew = usar.id
     try:
