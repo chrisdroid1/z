@@ -46,9 +46,7 @@ async def update_admin(client, message: Message):
 @authorized_users_only
 async def pause(_, message: Message):
     chat_id = get_chat_id(message.chat)
-    if (chat_id not in callsmusic.pytgcalls.active_calls) or (
-        callsmusic.pytgcalls.active_calls[chat_id] == "paused"
-    ):
+    if chat_id in callsmusic.pytgcalls.active_calls:
         await message.reply_text("❗ Nothing is playing!")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
@@ -60,9 +58,7 @@ async def pause(_, message: Message):
 @authorized_users_only
 async def resume(_, message: Message):
     chat_id = get_chat_id(message.chat)
-    if (chat_id not in callsmusic.pytgcalls.active_calls) or (
-        callsmusic.pytgcalls.active_calls[chat_id] == "playing"
-    ):
+    if chat_id in callsmusic.pytgcalls.active_calls:
         await message.reply_text("❗ Nothing is paused!")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
